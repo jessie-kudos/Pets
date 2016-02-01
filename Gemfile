@@ -37,7 +37,8 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 # gem 'capistrano-rails', group: :development
 
 # Zurb Foundation
-gem 'foundation-rails'
+gem 'foundation-rails', '~> 5.5'
+gem 'font-awesome-rails'
 
 # Paperclip
 gem 'paperclip', '~> 4.3'
