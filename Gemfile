@@ -38,6 +38,7 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 
 # Zurb Foundation
 gem 'foundation-rails'
+gem 'font-awesome-rails'
 
 # Paperclip
 gem 'paperclip', '~> 4.3'
