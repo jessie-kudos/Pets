@@ -174,7 +174,7 @@ DEPENDENCIES
   coffee-rails (~> 4.1.0)
   devise
   font-awesome-rails
-  foundation-rails (~> 5.5)
+  foundation-rails
   jbuilder (~> 2.0)
   jquery-rails
   paperclip (~> 4.3)
