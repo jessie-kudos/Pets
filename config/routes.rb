@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
+  get 'Welcome' => 'pets#home'
   devise_for :users
+  resources :pets
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
@@ -56,5 +58,5 @@ Rails.application.routes.draw do
   #   end
 
   # Devise
-  root to: "pets#index"
+  root to: "pets#home"
 end
