@@ -20,7 +20,7 @@
 $main-lightgrey: lightgrey;
 
 body{
-background-image:  image-url('background.png');
+background-color: #e8e8e8;
 }
 
 h2 {
@@ -36,11 +36,11 @@ p {
 }
 
 .inner-wrap{
-  background-image:  image-url('background.png');
+  background-color: #e8e8e8;
 }
 
 .tab-bar {
-  background-image:  image-url('background.png');
+  background-color: #e8e8e8;
   height: 38px;
 }
 
@@ -99,7 +99,7 @@ left: 18px;
 }
 
 .top-bar {
-background-image:  image-url('background.png');
+background-color: #e8e8e8;
 height: 130px;
 }
 
@@ -121,7 +121,7 @@ button, .button-home {
 }
 
 button, .button-menu {
-  background-image: image-url('background.png');
+  background-color: #e8e8e8;
   border-radius: 7px;
   padding: 7px;
   font-family: inherit;
