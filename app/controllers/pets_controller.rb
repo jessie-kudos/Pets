@@ -42,8 +42,8 @@ class PetsController < ApplicationController
   private
 
   def pet_params
-    params.require(:todo).permit(:species, :name, :sex, :colour, :identification, :location,
-                                 :photo_file_name, :description, :status)
+    params.require(:pet).permit(:species, :name, :sex, :colour, :identification, :location,
+                                :description, :status)
   end
 
   def set_pet

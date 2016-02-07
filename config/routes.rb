@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
-  get 'Welcome' => 'pets#home'
   devise_for :users
   resources :pets
+  get 'home' => 'pets#home'
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
