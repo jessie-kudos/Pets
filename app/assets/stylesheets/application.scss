@@ -1,0 +1,155 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or any plugin's vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any styles
+ * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
+ * file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ *= require foundation_and_overrides
+
+ */
+@import 'foundation';
+
+$main-lightgrey: lightgrey;
+
+body{
+background-image:  image-url('background.png');
+}
+
+h2 {
+  font-family: inherit;
+  font-weight: 900;
+  font-size: xx-large
+}
+
+p {
+  font-family: sans-serif;
+  font-size: x-large;
+  font-weight: 200;
+}
+
+.inner-wrap{
+  background-image:  image-url('background.png');
+}
+
+.tab-bar {
+  background-image:  image-url('background.png');
+  height: 38px;
+}
+
+@media screen and (max-width: 980px) {
+  .tab-bar .menu-icon {
+    width: 58px;
+    height: 38px;
+    opacity: 0.25;
+    background-color: $oil;
+    border-radius: 7px;
+    -moz-border-radius: 7px;
+    -webkit-border-radius: 7px;
+    border: 2px solid $oil;
+    margin: 5px;
+  }
+}
+
+.left-off-canvas-menu {
+  background-color: white;
+}
+
+ul.off-canvas-list li a {
+  color: $oil;
+  border-bottom: 1px solid lightgrey;
+  font-family: inherit;
+  font-weight: 900;
+}
+
+ul.off-canvas-list li label {
+  background: lightgrey;
+  color: $oil;
+  font-size: initial;
+  font-family: inherit;
+  font-weight: 900;
+}
+
+.mylogo {
+  height: 95px;
+}
+
+.tab-bar .menu-icon span::after {
+left: 18px;
+}
+
+.panel {
+  background-color: white;
+  border-color: white;
+  border-radius: 7px;
+}
+
+.button.expand {
+  border-radius: 7px;
+  font-family: inherit;
+  font-weight: 900;
+  font-size: larger;
+}
+
+.top-bar {
+background-image:  image-url('background.png');
+height: 130px;
+}
+
+.top-bar .title-area {
+  margin-top: 50px;
+}
+
+.top-bar-section li:not(.has-form) a:not(.button) {
+  background-image:  image-url('background.png');
+}
+
+button, .button-home {
+  background-color: $oil;
+  border-radius: 7px;
+  padding: 7px;
+  font-family: inherit;
+  font-weight: 900;
+  font-size: medium;
+}
+
+button, .button-menu {
+  background-image: image-url('background.png');
+  border-radius: 7px;
+  padding: 7px;
+  font-family: inherit;
+  font-weight: 900;
+  font-size: medium;
+}
+
+a.button-home {
+  color: white;
+}
+
+a.button-menu {
+  color: $oil;
+}
+
+.left-submenu.move-right {
+  background-color: white;
+  height: 500px;
+}
+
+.dropdown.button, button.dropdown {
+  color: $oil;
+  border-radius: 7px;
+  font-family: inherit;
+  font-weight: 900;
+  font-size: medium;
+}
+
+.button.button.dropdown::after {
+  color: $oil;
+}

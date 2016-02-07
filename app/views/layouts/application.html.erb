@@ -4,17 +4,119 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <title><%= content_for?(:title) ? yield(:title) : "foundation-rails" %></title>
+    <title><%= content_for?(:title) ? yield(:title) : "Pet Finder" %></title>
 
-    <%= stylesheet_link_tag    "application" %>
+    <%= stylesheet_link_tag    "application", media: 'all', 'data-turbolinks-track' => true %>
     <%= javascript_include_tag "vendor/modernizr" %>
     <%= javascript_include_tag "application", 'data-turbolinks-track' => true %>
     <%= csrf_meta_tags %>
   </head>
 
   <body>
+    <div class="off-canvas-wrap" data-offcanvas>
+      <div class="inner-wrap">
 
-    <%= yield %>
+        <!-- For small to medium devices -->
+        <div class="hide-for-large-up">
+          <nav class="tab-bar sticky">
+            <section class="left">
+              <a class="left-off-canvas-toggle menu-icon" href=""><span></span></a>
+            </section>
+          </nav>
+
+          <aside class="left-off-canvas-menu">
+            <ul class="off-canvas-list">
+
+              <% if user_signed_in? %>
+                <li><label><%= current_user.email %></label></li>
+                <li> <%= link_to 'Home', root_path %></li>
+                <li> <%= link_to 'Sign Out', destroy_user_session_path, method: :delete %></li>
+                <li class="has-submenu"><a href="">Profile</a>
+                  <ul class="left-submenu">
+                    <li class="back"><a href="#">Back</a></li>
+                    <li><label>Profile</label></li>
+                    <li><%= link_to 'Change Password', edit_user_registration_path %></li>
+                    <li><%= link_to 'Edit Pet Report', edit_pet_path(:id) %></li>
+                    <ul class="left-submenu">
+                      <li class="back"><a href="#">Back</a></li>
+                    </ul>
+                  </ul>
+                </li>
+
+              <% else %>
+                <li><label>Welcome</label></li>
+                <li> <%= link_to 'Home', root_path %></li>
+                <li> <%= link_to 'Sign In', new_user_session_path, method: :get %></li>
+                <li> <%= link_to 'Register', new_user_registration_path, method: :get %></li>
+              <% end %>
+
+              <li> <%= link_to 'Lost a Pet?', new_pet_path(:id), method: :get %></li>
+              <li> <%= link_to 'Found a Pet?', new_pet_path(:id), method: :get %></li>
+
+              <li class="has-submenu"><a href="">Lost/Found Database</a>
+                <ul class="left-submenu">
+                  <li class="back"><a href="#">Back</a></li>
+                  <li><label>Profile</label></li>
+                  <li> <%= link_to 'Dog Database', pets_path %></li>
+                  <li> <%= link_to 'Cat Database', pets_path %></li>
+                  <li> <%= link_to 'Other Pet Database', pets_path %></li>
+                  <ul class="left-submenu">
+                    <li class="back"><a href="#">Back</a></li>
+                  </ul>
+                </ul>
+              </li>
+              <li> <%= link_to 'Contact', root_path %></li>
+            </ul>
+          </aside>
+
+          <div class="row">
+            <div class="small-12 column text-center">
+              <div id="logo">
+                <h1>
+                  <a href="<%= root_path %>">
+                  <%= image_tag 'logo.png', class: 'mylogo' %>
+                  </a>
+                </h1>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- For large and up devices -->
+        <div class="row hide-for-small hide-for-medium">
+          <div class="small-3 columns">
+            <a href="<%= root_path %>">
+                     <%= image_tag 'logo.png', class: 'mylogo' %>
+                    </a>
+          </div>
+          <div class"small-9 columns button-group">
+            <a> <%= link_to 'Home', root_path, class: 'button-home' %> </a>
+            <a> <%= link_to 'Lost a Pet?', new_pet_path(:id), class: 'button-menu' %> </a>
+            <a> <%= link_to 'Found a Pet?', new_pet_path(:id), class: 'button-menu' %> </a>
+            <a> <%= link_to 'Contact', root_path, class: 'button-menu' %> </a>
+
+            <% if user_signed_in? %>
+             <button href="#" data-dropdown="drop1" aria-controls="drop1" aria-expanded="false" class="button dropdown">Profile</button><br>
+            <ul id="drop1" data-dropdown-content class="f-dropdown" aria-hidden="true">
+              <li> <%= link_to 'Sign Out', destroy_user_session_path, method: :delete %></li>
+              <li><%= link_to 'Change Password', edit_user_registration_path %></li>
+              <li><%= link_to 'Edit Pet Report', edit_pet_path(:id) %></li>
+            </ul>
+            <% else %>
+              <a> <%= link_to 'Sign In/Register', new_user_session_path, method: :get %></a>
+            <% end %>
+          </div>
+        </div>
+
+         <section class="main-section">
+          <p class="notice"><%= notice %></p>
+          <p class="alert"><%= alert %></p>
+            <%= yield %>
+        </section>
+
+        <a class="exit-off-canvas"></a>
+      </div> <!-- .inner-wrap -->
+    </div> <!-- .off-canvas-wrap -->
 
   </body>
 </html>
