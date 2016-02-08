@@ -9,6 +9,7 @@ describe PetPolicy, type: :policy do
     let(:user) { nil }
 
     it { is_expected.to permit(:index) }
+    it { is_expected.to permit(:show) }
 
     it { is_expected.to_not permit(:create) }
     it { is_expected.to_not permit(:update) }
@@ -20,6 +21,7 @@ describe PetPolicy, type: :policy do
 
     it { is_expected.to permit(:index) }
     it { is_expected.to permit(:create) }
+    it { is_expected.to permit(:show) }
 
     it { is_expected.to_not permit(:update) }
     it { is_expected.to_not permit(:destroy) }
@@ -37,6 +39,7 @@ describe PetPolicy, type: :policy do
 
     it { is_expected.to permit(:index) }
     it { is_expected.to permit(:create) }
+    it { is_expected.to permit(:show) }
     it { is_expected.to permit(:update) }
     it { is_expected.to permit(:destroy) }
   end
