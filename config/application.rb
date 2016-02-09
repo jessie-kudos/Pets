@@ -31,5 +31,8 @@ module Pets
 
     # Do not swallow errors in after_commit/after_rollback callbacks.
     config.active_record.raise_in_transactional_callbacks = true
+
+    # globally handle Pundit::NotAuthorizedError
+    config.action_dispatch.rescue_responses["Pundit::NotAuthorizedError"] = :forbidden
   end
 end
