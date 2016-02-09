@@ -8,7 +8,7 @@ FactoryGirl.define do
     location { %w(NE NW SE SW Central).sample }
     # photo_file_name { Faker::Lorem.word }
     description { Faker::Lorem.paragraph }
-    status { Faker::Lorem.word }
+    status { %w(lost found).sample }
     user
   end
 end
