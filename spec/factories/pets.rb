@@ -6,7 +6,6 @@ FactoryGirl.define do
     colour { Faker::Lorem.word }
     identification { Faker::Lorem.word }
     location { %w(NE NW SE SW Central).sample }
-    # photo_file_name { Faker::Lorem.word }
     description { Faker::Lorem.paragraph }
     status { %w(lost found).sample }
     user

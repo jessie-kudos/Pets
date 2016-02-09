@@ -6,6 +6,7 @@ abort("The Rails environment is running in production mode!") if Rails.env.produ
 require 'spec_helper'
 require 'rspec/rails'
 require 'pundit/rspec'
+require 'paperclip/matchers'
 # Add additional requires below this line. Rails is not loaded until this point!
 
 # Requires supporting ruby files with custom matchers and macros, etc, in
@@ -58,6 +59,9 @@ RSpec.configure do |config|
 
   # Pundit Matchers
   config.include PunditMatchers, type: :policy
+
+  # Paperclip Matchers
+  config.include Paperclip::Shoulda::Matchers
 
   # Shoulda Matchers
   Shoulda::Matchers.configure do |config|

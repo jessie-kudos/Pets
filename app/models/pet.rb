@@ -1,5 +1,6 @@
 class Pet < ActiveRecord::Base
   belongs_to :user
+  has_many :photos
   validates :user, presence: true
   validates :species, inclusion: { in: %w(dog cat other) }, presence: true
   validates :sex, inclusion: { in: %w(male female unknown) }, presence: true
