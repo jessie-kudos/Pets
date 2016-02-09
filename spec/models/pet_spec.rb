@@ -11,4 +11,18 @@ RSpec.describe Pet, type: :model do
   it { is_expected.to validate_presence_of :location }
   it { is_expected.to validate_inclusion_of(:status).in_array(%w(lost found)) }
   it { is_expected.to validate_presence_of :status }
+
+  describe '.lost' do
+    subject { Pet.lost }
+    let!(:pet_1) { FactoryGirl.create(:pet, status: 'lost') }
+    let!(:pet_2) { FactoryGirl.create(:pet, status: 'found') }
+
+    it 'should include pets that are lost' do
+      is_expected.to include pet_1
+    end
+
+    it 'should not include pets that are found' do
+      is_expected.to_not include pet_2
+    end
+  end
 end
