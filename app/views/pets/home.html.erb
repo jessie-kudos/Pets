@@ -4,8 +4,8 @@
     <!-- For small and medium devices -->
     <div class="row hide-for-large-up">
       <div class="small-11 small-centered medium-11 medium-centered columns text-center">
-        <h2>Description of site......</h2>
-        <p>sidfh  dfsh  fhsd huf sdhuf usdiof sudiof sdfhuoidsf dsufh dsufhusdifh udsfh usdfh usdfh sdhf sdfusdf</p>
+        <h1>Welcome to Pet Finder Calgary</h1>
+        <h2>sidfh  dfsh  fhsd huf sdhuf usdiof sudiof sdfhuoidsf dsufh dsufhusdifh udsfh usdfh usdfh sdhf sdfusdf</h2>
         <%= link_to 'Lost a Pet?', root_path, class: 'button expand' %>
         <%= link_to 'Found a Pet?', root_path, class: 'button expand' %>
       </div>
@@ -14,10 +14,10 @@
     <!-- For large devices only -->
     <div class="row hide-for-small hide-for-medium">
       <div class="small-8 columns">
-        <h2>Description of site......</h2>
-        <p>sidfh  dfsh  fhsd huf sdhuf usdiof sudiof sdfhuoidsf dsufh dsufhusdifh udsfh usdfh usdfh sdhf sdfusdf</p>
+        <h1>Welcome to Pet Finder Calgary</h1>
+        <h2>sidfh  dfsh  fhsd huf sdhuf usdiof sudiof sdfhuoidsf dsufh dsufhusdifh udsfh usdfh usdfh sdhf sdfusdf</h2>
       </div>
-      <div class="small-4 columns text-center">
+      <div class="small-4 columns text-center header-panel-buttons">
         <%= link_to 'Lost a Pet?', root_path, class: 'button expand' %>
           <%= link_to 'Found a Pet?', root_path, class: 'button expand' %>
       </div>
@@ -25,4 +25,83 @@
   </div>
 </div>
 
-<%= image_tag 'DogData.png', class: 'DogData' %>
+<!-- For small devices only -->
+
+<div class="row hide-for-medium-up">
+  <div class="small-11 small-centered medium-11 medium-centered large-12 large-centered columns panel small-data-panel">
+    <a href="<%= pets_path %>">
+    <%= image_tag 'DogData.png', class: 'DogData' %>
+    <h3>Dog Database</h3>
+    <p>Search for all Lost or Found Dogs in the Calgary area.</p>
+  </div>
+</div>
+
+<div class="row hide-for-medium-up">
+  <div class="small-11 small-centered medium-11 medium-centered large-12 large-centered columns panel">
+    <a href="<%= pets_path %>">
+    <%= image_tag 'CatData.png', class: 'CatData' %>
+    <h3>Dog Database</h3>
+    <p>Search for all Lost or Found Dogs in the Calgary area.</p>
+  </div>
+</div>
+
+<div class="row hide-for-medium-up">
+  <div class="small-11 small-centered medium-11 medium-centered large-12 large-centered columns panel">
+    <a href="<%= pets_path %>">
+    <%= image_tag 'OtherData.png', class: 'OtherData' %>
+    <h3>Dog Database</h3>
+    <p>Search for all Lost or Found Dogs in the Calgary area.</p>
+  </div>
+</div>
+
+<!-- For medium devices -->
+<div class="row hide-for-small hide-for-large med-data-panel">
+  <div class="medium-up-3 large-up-3">
+    <div class="small-4 columns panel database-panel">
+      <a href="<%= pets_path %>">
+      <%= image_tag 'DogData.png', class: 'DogData' %>
+      <h3>Dog Database</h3>
+      <p>Search for all Lost or Found Dogs in the Calgary area.</p>
+    </div>
+
+    <div class="small-4 columns panel database-panel">
+      <a href="<%= pets_path %>">
+      <%= image_tag 'CatData.png', class: 'CatData' %>
+      <h3>Dog Database</h3>
+      <p>Search for all Lost or Found Dogs in the Calgary area.</p>
+    </div>
+
+    <div class="small-4 columns panel database-panel">
+      <a href="<%= pets_path %>">
+      <%= image_tag 'OtherData.png', class: 'OtherData' %>
+      <h3>Dog Database</h3>
+      <p>Search for all Lost or Found Dogs in the Calgary area.</p>
+    </div>
+  </div>
+</div>
+
+<!-- For large devices -->
+<div class="row hide-for-small hide-for-medium panel database-panel">
+  <div class="medium-up-3 large-up-3">
+    <div class="small-4 columns database-panel">
+      <a href="<%= pets_path %>">
+      <%= image_tag 'DogData.png', class: 'DogData' %>
+      <h3>Dog Database</h3>
+      <p>Search for all Lost or Found Dogs in the Calgary area.</p>
+    </div>
+
+    <div class="small-4 columns panel database-panel">
+      <a href="<%= pets_path %>">
+      <%= image_tag 'CatData.png', class: 'CatData' %>
+      <h3>Dog Database</h3>
+      <p>Search for all Lost or Found Dogs in the Calgary area.</p>
+    </div>
+
+    <div class="small-4 columns panel database-panel">
+      <a href="<%= pets_path %>">
+      <%= image_tag 'OtherData.png', class: 'OtherData' %>
+      <h3>Dog Database</h3>
+      <p>Search for all Lost or Found Dogs in the Calgary area.</p>
+    </div>
+  </div>
+</div>

@@ -18,29 +18,20 @@
 @import 'foundation';
 
 $main-lightgrey: lightgrey;
+$background-color: #e8e8e8;
+$header-font-color: #444;
+$font-color: #696969;
 
 body{
-background-color: #e8e8e8;
-}
-
-h2 {
-  font-family: inherit;
-  font-weight: 900;
-  font-size: xx-large
-}
-
-p {
-  font-family: sans-serif;
-  font-size: x-large;
-  font-weight: 200;
+background-color: $background-color;
 }
 
 .inner-wrap{
-  background-color: #e8e8e8;
+  background-color: $background-color;
 }
 
 .tab-bar {
-  background-color: #e8e8e8;
+  background-color: $background-color;
   height: 38px;
 }
 
@@ -99,7 +90,7 @@ left: 18px;
 }
 
 .top-bar {
-background-color: #e8e8e8;
+background-color: $background-color;
 height: 130px;
 }
 
@@ -121,7 +112,7 @@ button, .button-home {
 }
 
 button, .button-menu {
-  background-color: #e8e8e8;
+  background-color: $background-color;
   border-radius: 7px;
   padding: 7px;
   font-family: inherit;
@@ -153,3 +144,74 @@ a.button-menu {
 .button.button.dropdown::after {
   color: $oil;
 }
+
+a img {
+  border-top-left-radius: 7px;
+  border-top-right-radius: 7px;
+}
+
+.column.small-centered:last-child, .columns.small-centered:last-child {
+  padding: 0px;
+}
+
+.panel h1 {
+  font-size: xx-large;
+  font-weight: bolder;
+  font-family: inherit;
+  padding: 20px;
+  color: $header-font-color;
+}
+
+.panel h2 {
+  font-size: x-large;
+  font-weight: lighter;
+  font-family: sans-serif;
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-bottom: 20px;
+  color: $font-color;
+  line-height: 35px;
+}
+
+.panel h3 {
+  font-size: larger;
+  font-weight: bolder;
+  font-family: inherit;
+  padding: 20px;
+  color: $header-font-color;
+}
+
+.panel p {
+  font-size: medium;
+  font-weight: lighter;
+  font-family: sans-serif;
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-bottom: 20px;
+  color: $font-color;
+  line-height: 35px;
+}
+
+.header-panel-buttons {
+  padding-top: 20px;
+  padding-right: 32px;
+}
+ .columns.medium-centered:last-child
+ {
+  padding: 0px;
+ }
+
+ .database-panel {
+  padding: 0px;
+ }
+
+ .small-data-panel {
+  padding: 0px;
+ }
+
+ .med-data-panel {
+  padding-left: 32px;
+  padding-right: 32px;
+ }
+
+
