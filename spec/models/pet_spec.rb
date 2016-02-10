@@ -21,7 +21,21 @@ RSpec.describe Pet, type: :model do
       is_expected.to include pet_1
     end
 
-    it 'should not include pets that are found' do
+    it 'should not include other pets' do
+      is_expected.to_not include pet_2
+    end
+  end
+
+  describe '.found' do
+    subject { Pet.found }
+    let!(:pet_1) { FactoryGirl.create(:pet, status: 'found') }
+    let!(:pet_2) { FactoryGirl.create(:pet, status: 'lost') }
+
+    it 'should include pets that are found' do
+      is_expected.to include pet_1
+    end
+
+    it 'should not other pets' do
       is_expected.to_not include pet_2
     end
   end
