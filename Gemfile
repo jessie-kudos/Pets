@@ -43,6 +43,9 @@ gem 'font-awesome-rails'
 # Paperclip
 gem 'paperclip', '~> 4.3'
 
+# Pundit
+gem 'pundit'
+
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug'
@@ -50,6 +53,7 @@ group :development, :test do
   gem 'shoulda-matchers', '~> 3.1'
   gem 'factory_girl_rails'
   gem 'database_cleaner'
+  gem 'faker'
 end
 
 group :development do
@@ -58,5 +62,13 @@ group :development do
 
   # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
   gem 'spring'
+
+  # RuboCop
+  gem 'rubocop', require: false
+
+  # Guard
+  gem 'guard'
+  gem 'guard-rspec'
+  gem 'guard-rubocop'
 end
 
