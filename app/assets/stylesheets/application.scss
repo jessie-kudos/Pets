@@ -13,7 +13,6 @@
  *= require_tree .
  *= require_self
  *= require foundation_and_overrides
-
  */
 @import 'foundation';
 
@@ -125,7 +124,9 @@ a.button-home {
 }
 
 a.button-menu {
-  color: $oil;
+  color: $header-font-color;
+  margin: 20px;
+  background-hover: white;
 }
 
 .left-submenu.move-right {
@@ -133,21 +134,27 @@ a.button-menu {
   height: 500px;
 }
 
-.dropdown.button, button.dropdown {
-  color: $oil;
+button.dropdown {
+  color: $header-font-color;
   border-radius: 7px;
   font-family: inherit;
   font-weight: 900;
   font-size: medium;
+  background-color: $background-color;
 }
 
-.button.button.dropdown::after {
-  color: $oil;
+.large-top-bar button.dropdown::after {
+  border-color: $header-font-color transparent transparent transparent;
+}
+
+.large-top-bar.button-group {
+  padding-top: 38px;
 }
 
 a img {
   border-top-left-radius: 7px;
   border-top-right-radius: 7px;
+  border: none;
 }
 
 .column.small-centered:last-child, .columns.small-centered:last-child {
@@ -209,9 +216,49 @@ a img {
   padding: 0px;
  }
 
- .med-data-panel {
-  padding-left: 32px;
-  padding-right: 32px;
+ .how-it-works-panel-small {
+  border-radius: 0px;
  }
+
+ .how-it-works-panel-small p {
+  padding-top: 15px;
+  padding-left: 0px;
+  padding-bottom: 0px;
+ }
+
+.how-it-works-panel-small h2 {
+  font-size: large;
+  font-weight: bolder;
+  font-family: inherit;
+  padding-left: 20px;
+  padding-top: 10px;
+  padding-bottom: 0px;
+  color: $header-font-color;
+ }
+
+  .how-it-works-panel-medium-up {
+  border-radius: 0px;
+ }
+
+ .how-it-works-panel-medium-up p {
+  padding-top: 15px;
+  padding-left: 0px;
+  padding-bottom: 0px;
+ }
+
+  .how-it-works-panel-medium-up h2 {
+    font-size: large;
+    font-weight: bolder;
+    font-family: inherit;
+    padding-left: 20px;
+    padding-top: 10px;
+    padding-bottom: 0px;
+    color: $header-font-color;
+ }
+
+.large-top-bar {
+  padding-top: 55px;
+}
+
 
 
