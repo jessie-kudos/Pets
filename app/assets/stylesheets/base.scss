@@ -1,0 +1,189 @@
+$background-color: #e8e8e8;
+$header-font-color: #444;
+$font-color: #696969;
+
+body{
+background-color: $background-color;
+}
+
+.inner-wrap{
+  background-color: $background-color;
+}
+
+.mylogo {
+  height: 95px;
+}
+
+.panel {
+  background-color: white;
+  border-color: white;
+  border-radius: 7px;
+}
+
+.panel h1 {
+  font-size: xx-large;
+  font-weight: bolder;
+  font-family: inherit;
+  padding: 20px;
+  color: $header-font-color;
+}
+
+.panel h2 {
+  font-size: x-large;
+  font-weight: lighter;
+  font-family: sans-serif;
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-bottom: 20px;
+  color: $font-color;
+  line-height: 35px;
+}
+
+.panel h3 {
+  font-size: larger;
+  font-weight: bolder;
+  font-family: inherit;
+  padding: 20px;
+  color: $header-font-color;
+}
+
+.panel p {
+  font-size: medium;
+  font-weight: lighter;
+  font-family: sans-serif;
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-bottom: 20px;
+  color: $font-color;
+  line-height: 35px;
+}
+
+// Font for forms
+label {
+  font-size: large;
+  font-weight: bolder;
+  font-family: inherit;
+  color: $header-font-color;
+}
+
+// Buttons
+.button.expand {
+  border-radius: 7px;
+  font-family: inherit;
+  font-weight: 900;
+  font-size: larger;
+}
+
+// Hambuger Icon, small and medium
+a.left-off-canvas-toggle.menu-icon {
+  width: 58px;
+  height: 38px;
+  opacity: 0.25;
+  background-color: $header-font-color;
+  border-radius: 7px;
+  -moz-border-radius: 7px;
+  -webkit-border-radius: 7px;
+  border: 2px solid $header-font-color;
+  margin: 5px;
+}
+
+
+.tab-bar .menu-icon span::after {
+left: 18px;
+}
+
+// Menu, small and medium
+.left-off-canvas-menu {
+  background-color: white;
+}
+
+ul.off-canvas-list li a {
+  color: $header-font-color;
+  border-bottom: 1px solid lightgrey;
+  font-family: inherit;
+  font-weight: 900;
+}
+
+ul.off-canvas-list li label {
+  background: lightgrey;
+  color: $header-font-color;
+  font-size: initial;
+  font-family: inherit;
+  font-weight: 900;
+}
+
+.tab-bar {
+  background-color: $background-color;
+  height: 38px;
+}
+
+// Menu, large
+.top-bar {
+background-color: $background-color;
+height: 130px;
+}
+
+.top-bar .title-area {
+  margin-top: 50px;
+}
+
+.top-bar-section li:not(.has-form) a:not(.button) {
+  background-image:  image-url('background.png');
+}
+
+button, .button-home {
+  background-color: $header-font-color;
+  border-radius: 7px;
+  padding: 7px;
+  font-family: inherit;
+  font-weight: 900;
+  font-size: medium;
+}
+
+button, .button-menu {
+  background-color: $background-color;
+  border-radius: 7px;
+  padding: 7px;
+  font-family: inherit;
+  font-weight: 900;
+  font-size: medium;
+}
+
+a.button-home {
+  color: white;
+}
+
+a.button-menu {
+  color: $header-font-color;
+  margin: 20px;
+  background-hover: white;
+}
+
+.left-submenu.move-right {
+  background-color: white;
+  height: 500px;
+}
+
+button.dropdown {
+  color: $header-font-color;
+  border-radius: 7px;
+  font-family: inherit;
+  font-weight: 900;
+  font-size: medium;
+  background-color: $background-color;
+}
+
+.large-top-bar button.dropdown::after {
+  border-color: $header-font-color transparent transparent transparent;
+}
+
+.large-top-bar.button-group {
+  padding-top: 38px;
+}
+
+.large-top-bar {
+ padding-top: 55px;
+}
+
+
+
