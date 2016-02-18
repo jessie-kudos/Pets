@@ -30,17 +30,18 @@
                       <li><a href="#">Area</a></li>
                     </ul>
                   </div>
-                  <!-- add @pets.each do |pet|  -->
+                  <% @pets.each do |pet| %>
                     <div class="panel search-panel">
                       <!-- for small devices -->
                       <div class="hide-for-medium-up">
                         <!-- pet photos -->
-                        <a href="<%= pet_path(:id) %>">
+<!--                         <a href="<%= pet_path(:id) %>">
                           <%= image_tag 'testphoto.png', class: 'photo' %>
-                        </a>
+                        </a> -->
+                        <%= pet.photos %>
                         <!-- pet descriptions -->
-                        <h3>Name</h3>
-                        <p>Description sdhf uiosfh suhfushf usdhf usdfh usdf.</p>
+                        <h3><%= pet.name %></h3>
+                        <p><%= pet.description %></p>
                       </div>
                       <!-- for medium devices -->
                       <div class="hide-for-small hide-for-large-up">
@@ -59,7 +60,7 @@
                         </div>
                       </div>
                     </div>
-                  <!-- end -->
+                  <% end %>
                 </div>
               </div>
             </form>

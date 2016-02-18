@@ -6,8 +6,13 @@
         <p>* indicates required fields</p>
         <%= simple_form_for @pet do |f| %>
           <div class="row">
+            <div class="small-4 columns">
+              <%= f.input :status, collection: ['lost', 'found'], prompt: 'Select one' %>
+            </div>
+          </div>
+          <div class="row">
             <div class="small-12 medium-4 columns">
-              <%= f.input :species, collection: [ "Dog", "Cat", "Other" ], prompt: "Select one" %>
+              <%= f.input :species, collection: [ "dog", "cat", "other" ], prompt: "Select one" %>
             </div>
             <div class="medium-8 columns">
                 <%= f.input :name, label: 'Name (if known)', placeholder: 'Pet name' %>
@@ -15,7 +20,7 @@
           </div>
           <div class="row">
             <div class="small-12 medium-3 large-3 columns">
-              <%= f.input :sex, collection: [ "Male", "Female", "Unknown" ], prompt: "Select one" %>
+              <%= f.input :sex, collection: [ "male", "female", "unknown" ], prompt: "Select one" %>
             </div>
             <div class="medium-9 large-9 columns">
               <label>* Colour (select ALL that apply)</label>
@@ -37,7 +42,7 @@
           </div>
           <div class="row">
             <div class="small-12 columns">
-              <%= f.input :image, label: 'Photo', as: :file %>
+              <%= f.input :photos, label: 'Photo', as: :file %>
               <%= f.button :submit %>
             </div>
           </div>
@@ -46,3 +51,4 @@
     </div>
   </div>
 </div>
+
