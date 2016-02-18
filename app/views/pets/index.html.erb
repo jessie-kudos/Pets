@@ -7,6 +7,7 @@
       </ul>
       <div class="tabs-content">
         <!-- Lost Tab -->
+
         <div class="content active" id="panel1">
 
           <!-- for small and medium devices -->
@@ -27,7 +28,7 @@
                     <ul id="drop1" data-dropdown-content class="f-dropdown" aria-hidden="true">
                       <li><a href="#">Gender</a></li>
                       <li><a href="#">Colour</a></li>
-                      <li><a href="#">Area</a></li>
+                      <li><a href="#">Location</a></li>
                     </ul>
                   </div>
                   <% @pets.each do |pet| %>
@@ -35,12 +36,12 @@
                       <!-- for small devices -->
                       <div class="hide-for-medium-up">
                         <!-- pet photos -->
-<!--                         <a href="<%= pet_path(:id) %>">
-                          <%= image_tag 'testphoto.png', class: 'photo' %>
-                        </a> -->
-                        <%= pet.photos %>
+                        <% pet.photos.each do |photo| %>
+                          <%= image_tag photo.image.url %>
+                        <% end %>
+                        <%= image_tag 'catdefault.png' %>
                         <!-- pet descriptions -->
-                        <h3><%= pet.name %></h3>
+                        <h3><%= display_pet_name(pet) %></h3>
                         <p><%= pet.description %></p>
                       </div>
                       <!-- for medium devices -->
@@ -48,9 +49,7 @@
                         <div class="row">
                           <div class="small-5 columns">
                             <!-- pet photos -->
-                            <a href="<%= pet_path(:id) %>">
-                              <%= image_tag 'testphoto.png', class: 'photo' %>
-                            </a>
+                            <%= image_tag 'catdefault.png' %>
                           </div>
                           <div class="small-7 columns">
                             <!-- pet descriptions -->
@@ -195,4 +194,4 @@
     </div>
   </div>
 </div>
-
+<% console %>
