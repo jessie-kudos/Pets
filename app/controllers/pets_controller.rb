@@ -1,5 +1,5 @@
 class PetsController < ApplicationController
-  before_action :set_todo, only: [:edit, :update, :destroy]
+  before_action :set_pet, only: [:show, :edit, :update, :destroy]
 
   def home
   end
@@ -50,10 +50,10 @@ class PetsController < ApplicationController
 
   def pet_params
     params.require(:pet).permit(:species, :name, :sex, :colour, :identification, :location,
-                                :description, :status)
+                                :description, :status, :photos)
   end
 
   def set_pet
-    @pet = current_user.todos.find(params[:id])
+    @pet = current_user.pets.find(params[:id])
   end
 end

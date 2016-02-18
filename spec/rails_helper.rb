@@ -57,6 +57,12 @@ RSpec.configure do |config|
   # arbitrary gems may also be filtered via:
   # config.filter_gems_from_backtrace("gem name")
 
+  # Macros
+  config.include Devise::TestHelpers, type: :controller
+  config.include Devise::TestHelpers, type: :view
+  config.include Devise::TestHelpers, type: :helper
+  config.include ControllerMacros, type: :controller
+
   # Pundit Matchers
   config.include PunditMatchers, type: :policy
 
