@@ -2,14 +2,15 @@ class Pet < ActiveRecord::Base
   belongs_to :user
   has_many :photos
 
-  bitmask :colour, :as => [:black, :white, :tan, :grey, :brown, :yellow, :red]
-  # SPECIES %w(dog cat other)
+  bitmask :colour, as: [:black, :white, :tan, :grey, :brown, :yellow, :red]
+  enum sex: [:male, :female, :unknown]
+  scope :by_sex, -> (sex) { where(sex: sex.to_sym) }
+  enum species: [:dog, :cat, :other]
+  scope :by_species, -> (species) { where(species: species.to_sym) }
+  enum location: [:SW, :SE, :NE, :NW]
+  scope :by_location, -> (location) { where(location: location.to_sym) }
+  enum status: [:lost, :found]
+  scope :by_status, -> (status) { where(status: status.to_sym) }
 
   validates :user, presence: true
-  validates :species, inclusion: { in: %w(dog cat other) }, presence: true
-  validates :sex, inclusion: { in: %w(male female unknown) }, presence: true
-  validates :location, inclusion: { in: %w(SW SE NW NE) }, presence: true
-  validates :status, inclusion: { in: %w(lost found) }, presence: true
-  scope :lost, -> { where(status: 'lost') }
-  scope :found, -> { where(status: 'found') }
 end
