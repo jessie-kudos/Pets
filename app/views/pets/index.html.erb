@@ -1,2 +1,197 @@
+<div class="row">
+  <div class="small-11 small-centered medium-11 large-12 columns">
+    <div class="panel database-panel">
+      <ul class="tabs" data-tab>
+        <li class="tab-title active"><a href="#panel1">Lost</a></li>
+        <li class="tab-title"><a href="#panel2">Found</a></li>
+      </ul>
+      <div class="tabs-content">
+        <!-- Lost Tab -->
 
+        <div class="content active" id="panel1">
 
+          <!-- for small and medium devices -->
+          <div class="hide-for-large-up">
+            <form>
+              <div class="row">
+                <div class="small-11 small-centered medium-11 columns">
+                  <div class="row collapse postfix round" style="border-color: transparent;">
+                    <div class="small-9 columns">
+                      <input type="text" placeholder="Search by keyword(s)">
+                    </div>
+                    <div class="small-3 columns">
+                      <a href="#" class="button postfix">Search</a>
+                    </div>
+                  </div>
+                  <div class="filter-button">
+                    <button href="#" data-dropdown="drop1" aria-controls="drop1" aria-expanded="false" class="button expand dropdown filter-button">Filters</button><br>
+                    <ul id="drop1" data-dropdown-content class="f-dropdown" aria-hidden="true">
+                      <li><a href="#">Gender</a></li>
+                      <li><a href="#">Colour</a></li>
+                      <li><a href="#">Location</a></li>
+                    </ul>
+                  </div>
+                  <% @pets.each do |pet| %>
+                    <div class="panel search-panel">
+                      <!-- for small devices -->
+                      <div class="hide-for-medium-up">
+                        <!-- pet photos -->
+                        <% pet.photos.each do |photo| %>
+                          <%= image_tag photo.image.url %>
+                        <% end %>
+                        <%= image_tag 'catdefault.png' %>
+                        <!-- pet descriptions -->
+                        <h3><%= display_pet_name(pet) %></h3>
+                        <p><%= pet.description %></p>
+                      </div>
+                      <!-- for medium devices -->
+                      <div class="hide-for-small hide-for-large-up">
+                        <div class="row">
+                          <div class="small-5 columns">
+                            <!-- pet photos -->
+                            <%= image_tag 'catdefault.png' %>
+                          </div>
+                          <div class="small-7 columns">
+                            <!-- pet descriptions -->
+                            <h3>Name</h3>
+                            <p>Description sdhf uiosfh suhfushf usdhf usdfh usdf.</p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  <% end %>
+                </div>
+              </div>
+            </form>
+          </div>
+
+          <!-- for large devices -->
+          <div class="hide-for-small hide-for-medium">
+            <div class="large-12 columns">
+              <div class="row">
+                <div class="small-8 columns">
+                  <div class="row collapse postfix round" style="border-color: transparent;">
+                    <div class="small-9 columns">
+                      <input type="text" placeholder="Search by keyword(s)">
+                    </div>
+                    <div class="small-3 columns">
+                      <a href="#" class="button postfix">Search</a>
+                    </div>
+                  </div>
+                </div>
+                <div class="small-4 columns">
+                  <div class="filter-button">
+                    <button href="#" data-dropdown="drop1" aria-controls="drop1" aria-expanded="false" class="button expand dropdown filter-button-large">Filters</button><br>
+                    <ul id="drop1" data-dropdown-content class="f-dropdown" aria-hidden="true">
+                      <li><a href="#">Gender</a></li>
+                      <li><a href="#">Colour</a></li>
+                      <li><a href="#">Area</a></li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+                <div class="small-6 columns">
+                  <div class="panel search-panel">
+                    <div class="row">
+                      <div class="small-5 columns">
+                        <!-- pet photos -->
+                        <a href="<%= pet_path(:id) %>">
+                          <%= image_tag 'testphoto.png', class: 'photo' %>
+                        </a>
+                      </div>
+                      <div class="small-7 columns">
+                        <!-- pet descriptions -->
+                        <h3>Name</h3>
+                        <p>Description sdhf uiosfh suhfushf usdhf usdfh usdf.</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="small-6 columns">
+                  <div class="panel search-panel">
+                    <div class="row">
+                      <div class="small-5 columns">
+                        <!-- pet photos -->
+                        <a href="<%= pet_path(:id) %>">
+                          <%= image_tag 'testphoto.png', class: 'photo' %>
+                        </a>
+                      </div>
+                      <div class="small-7 columns">
+                        <!-- pet descriptions -->
+                        <h3>Name</h3>
+                        <p>Description sdhf uiosfh suhfushf usdhf usdfh usdf.</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div> <!-- closes Lost tab -->
+
+        <!-- Found Tab -->
+        <div class="content" id="panel2">
+
+          <!-- for small and medium devices -->
+          <div class="hide-for-large-up">
+            <form>
+              <div class="row">
+                <div class="small-11 small-centered medium-11 columns">
+                  <div class="row collapse postfix round" style="border-color: transparent;">
+                    <div class="small-9 columns">
+                      <input type="text" placeholder="Search by keyword(s)">
+                    </div>
+                    <div class="small-3 columns">
+                      <a href="#" class="button postfix">Search</a>
+                    </div>
+                  </div>
+                  <div class="filter-button">
+                    <button href="#" data-dropdown="drop1" aria-controls="drop1" aria-expanded="false" class="button expand dropdown filter-button">Filters</button><br>
+                    <ul id="drop1" data-dropdown-content class="f-dropdown" aria-hidden="true">
+                      <li><a href="#">Gender</a></li>
+                      <li><a href="#">Colour</a></li>
+                      <li><a href="#">Area</a></li>
+                    </ul>
+                  </div>
+                  <!-- add @pets.each do |pet| here -->
+                    <div class="panel search-panel">
+                      <!-- for small devices -->
+                      <div class="hide-for-medium-up">
+                        <!-- pet photos -->
+                        <a href="<%= pet_path(:id) %>">
+                          <%= image_tag 'testphoto.png', class: 'photo' %>
+                        </a>
+                        <!-- pet descriptions -->
+                        <h3>Name</h3>
+                        <p>Description sdhf uiosfh suhfushf usdhf usdfh usdf.</p>
+                      </div>
+                      <!-- for medium devices -->
+                      <div class="hide-for-small hide-for-large-up">
+                        <div class="row">
+                          <div class="small-5 columns">
+                            <!-- pet photos -->
+                            <a href="<%= pet_path(:id) %>">
+                              <%= image_tag 'testphoto.png', class: 'photo' %>
+                            </a>
+                          </div>
+                          <div class="small-7 columns">
+                            <!-- pet descriptions -->
+                            <h3>Name</h3>
+                            <p>Description sdhf uiosfh suhfushf usdhf usdfh usdf.</p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              <!-- end -->
+            </form>
+          </div>
+        </div> <!-- closes Found tab -->
+      </div>
+    </div>
+  </div>
+</div>
+<% console %>

@@ -1,0 +1,54 @@
+<div class="row">
+  <div class="small-11 small-centered medium-11 large-12 columns panel">
+    <div class="row">
+      <div class="small-11 small-centered medium-11 large-8 columns">
+        <h1 class="text-center">Lost/Found Pet Report</h1>
+        <p>* indicates required fields</p>
+        <%= simple_form_for @pet do |f| %>
+          <div class="row">
+            <div class="small-4 columns">
+              <%= f.input :status, collection: ['lost', 'found'], prompt: 'Select one' %>
+            </div>
+          </div>
+          <div class="row">
+            <div class="small-12 medium-4 columns">
+              <%= f.input :species, collection: [ "dog", "cat", "other" ], prompt: "Select one" %>
+            </div>
+            <div class="medium-8 columns">
+                <%= f.input :name, label: 'Name (if known)', placeholder: 'Pet name' %>
+            </div>
+          </div>
+          <div class="row">
+            <div class="small-12 medium-3 large-3 columns">
+              <%= f.input :sex, collection: [ "male", "female", "unknown" ], prompt: "Select one" %>
+            </div>
+            <div class="medium-9 large-9 columns">
+              <label>* Colour (select ALL that apply)</label>
+              <%= f.collection_check_boxes :colour, [['black', image_tag('black.png')], ['white', image_tag('white.png')], ['tan', image_tag('tan.png')], ['grey', image_tag('grey.png')], ['brown', image_tag('brown.png')], ['yellow', image_tag('yellow.png')], ['red', image_tag('red.png')]], :first, :last,
+                    {:item_wrapper_class => 'checkbox_container'} %>
+            </div>
+          </div>
+          <div class="row">
+            <div class="medium-8 columns">
+              <%= f.input :identification, label: 'Identification (optional)', placeholder: 'Tag number, tattoo, microchip ID...' %>
+            </div>
+            <div class="medium-4 columns">
+              <%= f.input :location, label: 'Lost/Found location', collection: ["NW", "NE", "SW", "SE"], prompt: "Select one" %>
+            </div>
+          </div>
+          <div class="row">
+            <div class="small-12 columns">
+              <%= f.input :description, placeholder: 'Include general appearance (breed etc.), exact location where lost/found, temperament, distingishing features ect.', as: :text %>
+          </div>
+          <div class="row">
+            <div class="small-12 columns">
+              <%= f.input :photos, label: 'Photo', as: :file %>
+              <%= f.button :submit %>
+            </div>
+          </div>
+        <% end %>
+      </div>
+    </div>
+  </div>
+</div>
+

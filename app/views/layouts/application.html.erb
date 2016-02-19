@@ -83,13 +83,16 @@
         </div>
 
         <!-- For large and up devices -->
-        <div class="row hide-for-small hide-for-medium">
+        <div class="row hide-for-small hide-for-medium large-top-bar">
           <div class="small-3 columns">
             <a href="<%= root_path %>">
                      <%= image_tag 'logo.png', class: 'mylogo' %>
                     </a>
           </div>
-          <div class"small-9 columns button-group">
+          <div class"small-9 columns" style="
+            padding-top: 26px;
+            text-align: right;
+          ">
             <a> <%= link_to 'Home', root_path, class: 'button-home' %> </a>
             <a> <%= link_to 'Lost a Pet?', new_pet_path(:id), class: 'button-menu' %> </a>
             <a> <%= link_to 'Found a Pet?', new_pet_path(:id), class: 'button-menu' %> </a>
@@ -103,7 +106,7 @@
               <li><%= link_to 'Edit Pet Report', edit_pet_path(:id) %></li>
             </ul>
             <% else %>
-              <a> <%= link_to 'Sign In/Register', new_user_session_path, method: :get %></a>
+              <a> <%= link_to 'Sign In/Register', new_user_session_path, method: :get, class: 'button-menu' %></a>
             <% end %>
           </div>
         </div>

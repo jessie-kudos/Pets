@@ -1,0 +1,35 @@
+.panel.search-panel {
+  border-color: #e8e8e8;
+}
+
+.button.postfix {
+border-top-right-radius: 7px;
+border-bottom-right-radius: 7px;
+}
+
+.filter-button button.dropdown::after {
+  border-color: #3f3f3f transparent transparent transparent;
+}
+
+.tabs dd.active > a, .tabs .tab-title.active > a {
+  color: #3f3f3f;
+  font-size: large;
+  font-weight: bolder;
+  font-family: inherit;
+}
+
+.tabs dd > a, .tabs .tab-title > a {
+  background-color: #e8e8e8;
+  color: #3f3f3f;
+  font-size: large;
+  font-weight: bolder;
+  font-family: inherit;
+}
+
+.filter-button-large {
+  margin-top: -10px;
+}
+
+
+
+
